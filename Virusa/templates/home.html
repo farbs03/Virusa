@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class='container home-main'>
+	<img src="{{ url_for('static', filename='virusa.png') }}" class='virusa-logo'>
+	<p>COVID-19 is continuing to plague the USA, and there is no sign of it stopping soon. With the increased resistance towards taking vital measures, such as wearing masks, the virus is more of a threat than ever, but we have seemingly stopped caring about it.</p>
+	<br>
+	<p>Virusa allows you to see the importance of taking various precations of preventing COVID-19, such as wearing a mask, washing hands, and social distancing. Using real statistics, it will tell you how reduced your chances of catching the virus are, given the measures taken. Hopefully, Virusa can tell its users how taking these simple measures can drastically reduce the chances of getting infected.</p>
+	<br>
+	<p>Additionally, Virusa provides up-to-date stats about COVID-19 in the USA.</p>
+	<br>
+	<h3>Total Cases:</h3>
+	<p>{{ cases }}</p>
+	<h3>Total Deaths:</h3>
+	<p>{{ deaths }}</p>
+	<br>
+	<p>Source: The CDC</p>
+	<footer class="contact">
+			<a href="mailto:cgeraldfarber@icloud.com" target="_blank"><div><i class="far fa-envelope"></i></div></a>
+			<a href="#" target="_blank"><div><i class="fab fa-linkedin"></i></div></a>
+			<a href="#" target="_blank"><div><i class="fab fa-instagram"></i></div></a>
+			<a href="#" target="_blank"><div><i class="fab fa-twitter"></i></div></a>
+	</footer>
+</div>
+
+{% endblock %}

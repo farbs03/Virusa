@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class='container content-section'>
+	<h2>About</h2>
+	<p>With all of the chaos currently ensuing in the US, it is important to be reminded of how vital taking the necessary health precautions such as wearing a mask and washing hands are in these times.</p>
+	<div class='quote'>
+		<p class='quotation-mark'>"</p><p class='quote-text'>We may be done with the pandemic, but the pandemic is not done with us.</p><p class='quotation-mark'>"</p>
+		<p>- Dr. Ashish Jha, director of the Harvard Global Health Institute</p>
+	</div>
+	<p>Virusa aims to hopefully give its users a good idea of the importance of said necessary precations through the simulations that it provides. The simulations can depict a situation where a group of people all wear masks, don't wear masks at all, etc. Although it won't be a 100% accurate depiction of reality, Virusa uses real probability and statistics to provide as accurate of a simulation as possible.</p>
+	<p>Through these simulations, Virusa should stand as a reminder that Coronavirus is still a very real thing in the US. If we stop being weary of it, it could spell a very bad future for the country.</p>
+	<br>
+	<img src="{{ url_for('static', filename='flatten-curve.jpg') }}" class='curve-img'>
+	<h3 class='normal-title'>About the creator of this website</h3>
+	<p>Chris Farber, a sophomore in high school, created this website for a competition over the summer. More info at <a href="https://chrisfarbs.herokuapp.com" target='_blank'>his personal website.</a></p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class='container content-section'>
+	<h2>Simulate</h2>
+	<p>Here, you can see the importance of taking various preventative measures for COVID-19. For example, you can see how reduced your chances are of catching the virus by wearing a mask, washing hands, etc. In addition, it takes into account if you are immune compromised or not. With the overbearing ignorance in the USA, these simple simulations you can try out will hopefully show and prove the importance of taking these preventative measures, even if it's just wearing a mask.</p>
+	<p>These simulations use real probability and statistics (sources listed below) gathered about wearing masks, etc. to provide a generally realistic depiction of how reduced your chances of catching the virus are.</p>
+	<br>
+	<br>
+	<p>See the significance of taking preventative measures below:</p>
+	<div class='form-group'>
+		<label for='masks'>Are you wearing a mask?</label>
+		<select class='form-control' id='masks'>
+			<option>Yes</option>
+			<option>No</option>
+		</select>
+		<label for='social'>Are you actively practicing social distancing (at least 6 ft. apart)?</label>
+		<select class='form-control' id='social'>
+			<option>Yes</option>
+			<option>No</option>
+		</select>
+		<label for='washing'>Are you actively washing your hands, especially after touching surfaces in public areas?</label>
+		<select class='form-control' id='washing'>
+			<option>Yes</option>
+			<option>No</option>
+		</select>
+	</div>
+	<button class='simulate-button' onclick='calculateChances()'>Simulate</button>
+	<br>
+	<div class='chances'>
+		<p class='chances-txt'>Chances of catching COVID-19: </p>
+		<p class='chances-txt' style='font-weight: bold;' id='percent'>Likely</p>
+	</div>
+	<script type="text/javascript">
+		function calculateChances(){
+			var percent = document.getElementById('percent');
+			var selections = [];
+			var masks = $('select[id="masks"]').val();
+			selections.push(masks);
+			var social = $('select[id="social"]').val();
+			selections.push(social);
+			var washing = $('select[id="washing"]').val();
+			selections.push(washing);
+			var yesses = []
+			for(var i = 0; i < 3; i++){
+				if(selections[i] == "Yes"){
+					yesses.push('Yes');
+				}
+			}
+			if(yesses.length == 0){
+				percent.innerHTML = "Likely";
+			}
+			else if(yesses.length == 1){
+				percent.innerHTML = "Unlikely"
+			}
+			else{
+				percent.innerHTML = "Extremely unlikely"
+			}
+		}
+	</script>
+</div>
+{% endblock %}
