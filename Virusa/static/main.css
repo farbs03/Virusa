@@ -1,0 +1,202 @@
+.navbar-toggle span.icon-bar {
+    transition: all 0.25s;
+}
+
+.navbar-toggle span:nth-child(2) {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggle span:nth-child(3) {
+    opacity: 0;
+}
+
+.navbar-toggle span:nth-child(4) {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggle.collapsed span:nth-child(2),
+.navbar-toggle.collapsed span:nth-child(4) {
+    transform: rotate(0);
+}
+
+.navbar-toggle.collapsed span:nth-child(3) {
+    opacity: 1;
+}
+
+.navbar-brand img{
+    width: 25%;
+    padding: none;
+    margin: none;
+}
+
+.home-main{
+    background-image: url('covid.jpg');
+    color: white;
+    width: 100%;
+    background-color: rgba(204,204,204,0.8);
+}
+.home-main h2{
+    font-size: 40px;
+}
+.home-main p{
+    font-size: 25px;
+}
+.virusa-logo{
+    width: 40%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.bottom footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.bottom{
+    position: fixed;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+}
+.contact{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 360px;
+}
+.contact div{
+    display: inline-block;
+    border-radius: 50%;
+    border: white 2px solid;
+    font-size: 24px;
+    width: 12%;
+    text-align: center;
+    margin: 21px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.3s;
+}
+@keyframes contact-ani{
+    from{border: white 2px solid; color: white;}
+    to{border: 2px solid white; color: white;}
+}
+.contact div:hover{
+    animation-name: contact-ani;
+    animation-duration: 0.3s;
+    border: 2px solid white;
+    color: white;
+    top: -5px;
+}
+.contact a{
+    color: white;
+}
+.copyright{
+    color: white;
+}
+#myNavbar ul{
+    float: right;
+}
+#myNavbar ul li a{
+    margin-right: 50px;
+    float: right;
+    text-align: center;
+}
+#myNavbar ul li a:hover{
+    color: #BD4FFF;
+}
+#nav-main{
+    margin-bottom: 0px;
+}
+.navbar-toggle{
+    border: none;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #f2f2f2;
+}
+h3{
+    font-size: 35px;
+}
+.copyright{
+    color: black;
+}
+.content-section{
+    width: 100%;
+}
+.content-section p{
+    font-size: 25px;
+}
+.content-section a{
+    color: #BD4FFF;
+    font-size: 25px;
+    text-decoration: none;
+}
+.normal-title{
+    font-size: 30px;
+}
+.curve-img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 30%;
+}
+.quote{
+    border-top: #BD4FFF 2px solid;
+    border-bottom: #BD4FFF 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    display: block;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.quotation-mark{
+    font-size: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+.quote-text{
+    display: inline-block;
+    font-weight: bold;
+}
+.form-group{
+    margin-left: 10px;
+    width: 300px;
+    font-size: 18px;
+}
+.form-control{
+    margin-bottom: 20px;
+}
+.simulate-button{
+    color: white;
+    background: #BD4FFF;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px #BD4FFF solid;
+    outline: none;
+}
+.chances{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    border: #BD4FFF 2px solid;
+    width: 32%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.chances-txt{
+    display: inline-block;
+}
+@media only screen and (max-width: 768px){
+    .virusa-logo{width: 70%;}
+    .curve-img{width: 50%;}
+}
